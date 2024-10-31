@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="sm:scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart.nike</title>
+    <link rel="icon" href="favicon/favicon4.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body class="min-h-full  border-r-slate-50 dark:bg-black dark:text-white">
+    <header class="bg-white text-white sticky top-0 z-10">
+        <div class="hidden sm:block">
+            <section class="flex bg-slate-950 dark:bg-slate-950 max-w-5xl mx-auto justify-between items-center px-6">
+                <h1 class="flex gap-4">
+                    <a href="jordan.html"><img src="logo/jordan.png" alt="jordan"></a>
+                    <a href="#hero"><img src="logo/star.png" alt="star"></a>
+                </h1>
+               
+                <div>
+                    <nav class="flex-row hidden md:block text-xs text-black m-3" aria-label="main">
+                        <a href="find.html" class="hover:opacity-90">Find a Store</a>
+                        |
+                        <a href="help.html" class="hover:opacity-90">Help</a>
+                        |
+                        <a href="join" class="hover:opacity-90">Join Us</a>
+                        |
+                        <a href="#contact" class="hover:opacity-90">Sign In</a>
+                    </nav>
+                </div>
+            </section>
+        </div>
+
+        <hr class="hidden sm:block mx-auto bg-slate-900 w-full mt-12 ">
+
+        <section class="max-w-full mx-auto flex justify-between items-center p-3">
+            <h1 class="px-6">
+                <a href="index.html"><img class="ml-16 w-10" src="favicon/favicon.png" alt="jordan"></a>
+            </h1>
+           
+            <div>
+                <nav class="hidden md:block space-x-8 font-medium text-xs text-black" aria-label="main">
+                    <a href="shop.html" class="hover:opacity-90">New</a>
+                    <a href="men.html" class="hover:opacity-90">Men</a>
+                    <a href="women.html" class="hover:opacity-90">Women</a>
+                    <a href="shop.html" class="hover:opacity-90">Kids</a>
+                    <a href="jordan.html" class="hover:opacity-90">Jordan</a>
+                    <a href="shop.html" class="hover:opacity-90">Sales</a>
+                </nav>
+            </div>
+
+            <h1 class="flex gap-4 px-6">
+                <form class="my-8 hidden sm:block">
+                    <input class="w-full rounded text-base bg-slate-500" type="email" placeholder="&#128269; Search">
+                </form>
+            
+                <a class="md:hidden w-8" href="#hero"><img src="logo/magnify.png" alt="jordan"></a>
+                <a class="md:hidden w-8" href="#hero"><img src="logo/login.png" alt="jordan"></a>
+                <a class="w-8" href="#hero"><img src="logo/heart.png" alt="jordan"></a>
+                <a class="w-8 flex flex-row" href="cart.html">
+                    <button id="save-btn" onclick="save()"></button>
+                    <img src="logo/bag.png" alt="bag">
+                    <h2 class="text-black" id="count-el"></h2>
+                </a>
+
+            </h1>
+
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-2xl text-black cursor-pointer relative w-8 h-8">
+                    &#9776;
+                </button>
+            </div>
+        </section>
+
+        <section id="mobile-menu" class="absolute top-0 bg-white w-full text-3xl flex-col  justify-center origin-top animate-open-menu hidden">
+            <button class="text-5xl text-black self-end px-6">
+                &times;
+            </button>
+            <nav class="flex flex-col min-h-screen items-center py-8 text-black" aria-label="mobile">
+                <a href="shop.html" class="w-full text-center py-6 hover:opacity-90">New & Featured</a>
+                <a href="men.html" class="w-full text-center py-6 hover:opacity-90">Men</a>
+                <a href="women.html" class="w-full text-center py-6 hover:opacity-90">Women</a>
+                <a href="shop.html" class="w-full text-center py-6 hover:opacity-90">Kids</a>
+                <a href="jordan.html" class="w-full text-center py-6 hover:opacity-90">Jordan</a>
+                <a href="shop.html" class="w-full text-center py-6 hover:opacity-90 mb-12">Sales</a>
+            </nav>
+            
+        </section>
+    </header>
+
+    <main class="w-full mx-auto bg-white">
+        <hr class="mx-auto bg-slate-900 w-full mt-12">
+        <section id="hero" class="flex flex-row bg-black w-full max-h-10 scroll-m-40 justify-center">
+            <button onclick="switchback()"><</button>
+            <h1 id="sale-el" class="text-center p-3"><a class="underline text-white text-xs font-medium" href="shop.html">Extra 25% Off Select Styles <br> Enter code JUMP25 in bag.</a></h1>
+            <button onclick="switchfront()">></button>
+        </section>
+        <hr class="mx-auto bg-slate-900 w-full mt-12 mb-12">
+        <section id="hero" class="w-full max-h-10 mb-12 scroll-m-40 justify-between mt-12 px-6 flex flex-col sm:flex-row">
+            <article class="w-2/3 flex flex-col justify-between px-6 gap-8">
+                <h2 class="text-2xl font-mono text-black px-6 font-medium mb-12">Bag</h2>
+                <div class="px-6">
+                    <div class="flex flex-col sm:flex-row justify-between">
+                        <div class="flex flex-row">
+                            <img class="w-1/3" src="cart/NIKE+C1TY.png" alt="">
+                            <div>
+                                <p class="text-black text-base font-medium mt-8">Nike C1TY "surplus" <br><span class="text-slate-500 text-lg">Shoes <br> 1 Color</span></p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-black text-xl font-medium line-through">$100</p>
+                    </div>
+                    <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    <p class="text-black font-medium py-8"><span class="font-bold">Shipping</span> <br> Arrives by monday, Nov 4</p>
+                    <p class="text-black font-medium">Free pickup</p>
+                    <p class="text-black underline font-medium"><a href="find.html"></a>Find a store</p>
+                </div>
+                <hr class="mx-auto bg-slate-900 w-full mt-12 mb-12">
+                <div class="px-6">
+                    <div class="flex flex-col sm:flex-row justify-between">
+                        <div class="flex flex-row">
+                            <img class="w-1/3" src="cart/brownstone.png" alt="">
+                            <div>
+                                <p class="text-black text-base font-medium mt-8">Nike C1TY "Brownstone" <br><span class="text-slate-500 text-lg">Big kid's Shoes <br> 1 Color</span> </p>
+                            </div>
+                        </div>
+                        
+                        <p class="text-black text-xl font-medium line-through">85$</p>
+                    </div>
+                    <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    <p class="text-black font-medium py-8"><span class="font-bold">Shipping</span> <br> Arrives by monday, Nov 4</p>
+                    <p class="text-black font-medium">Free pickup</p>
+                    <p class="text-black underline font-medium"><a href="find.html"></a>Find a store</p>
+                </div>
+                <hr class="mx-auto bg-slate-900 w-full mt-12 mb-12">
+                <div class="px-6">
+                    <div class="flex flex-col sm:flex-row justify-between">
+                        <div class="flex flex-row">
+                            <img class="w-1/3" src="cart/nikelife.png" alt="">
+                            <div>
+                                <p class="text-black text-base font-medium mt-8">Nike C1TY "surplus" <br><span class="text-slate-500 text-lg">Men's Fair Isle Swoosh Sweater <br> 1 Color</span> </p>
+                            </div>
+                        </div>
+                        <p class="text-black text-xl font-medium line-through">$200</p>
+                    </div>
+                    <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    <p class="text-black font-medium py-8"><span class="font-bold">Shipping</span> <br> Arrives by monday, Nov 4</p>
+                    <p class="text-black font-medium">Free pickup</p>
+                    <p class="text-black underline font-medium"><a href="find.html"></a>Find a store</p>
+                </div>
+            </article>
+            <hr class="md:hidden mx-auto bg-slate-900 w-full mt-12 mb-12">
+            <article class="w-1/3 gap-8 px-6 text-black flex flex-col font-medium">
+                <h2 class="text-2xl font-mono text-black font-medium">Summary</h2>
+                <p>Do you have a promo code?</p>
+                <p class="flex justify-between">Subtotal <span>$107.94</span></p>
+                <p class="flex justify-between">Estimated Shipping & Handling<span>Free</span></p>
+                <p class="flex justify-between">Estimated Tax<span>—</span></p>
+                <hr class="mx-auto bg-slate-900 w-full mt-12 mb-12">
+                <p class="flex justify-between">Total <span>$107.94</span></p>
+                <button class="bg-black px-6 font-medium text-white p-4 rounded-3xl border border-slate-900 dark:border-none items-center"><a href="#check">Checkout</a></button>
+                <button class="bg-white px-6  font-medium text-pay p-4 rounded-3xl border border-slate-900 dark:border-slate-900 justify-center"><a class="flex justify-center" href="https://www.paypal.com/checkoutnow?atomic-event
+                    -state=eyJkb21haW4iOiJzZGtfcGF5cGFsX3Y1IiwiZXZlbnRzIjpbXSwiaW50ZW50IjoiY2xpY
+                    2tfcGF5bWVudF9idXR0b24iLCJpbnRlbnRUeXBlIjoiY2xpY2siLCJpbnRlcmFjdGlvblN0YXJ0VGl
+                    tZSI6MTI1MTM4MTAuNSwidGltZVN0YW1wIjoxMjUxMzgxMSwidGltZU9yaWdpbiI6MTczMDIwMzMyMD
+                    YwMi4yLCJ0YXNrIjoic2VsZWN0X29uZV90aW1lX2NoZWNrb3V0IiwiZmxvdyI6Im9uZS10aW1lLWNoZ
+                    WNrb3V0IiwidWlTdGF0ZSI6IndhaXRpbmciLCJwYXRoIjoiL3NtYXJ0L2J1dHRvbnMiLCJ2aWV3TmFt
+                    ZSI6InBheXBhbC1zZGsifQ%3D%3D&sessionID=uid_a7664f2edb_mte6ndy6nde&buttonSession
+                    ID=uid_94c1be4919_mti6mdi6mda&stickinessID=uid_da64c3302f_mte6ndy6ndm&smokeHash=
+                    &sign_out_user=false&fundingSource=paypal&buyerCountry=NG&locale.x=en_US&commit=
+                    true&client-metadata-id=uid_a7664f2edb_mte6ndy6nde&standaloneFundingSource=paypal
+                    &branded=true&token=EC-4D427218NK515554L&clientID=AewrZGCMSX6MUXNITlpCI9nqaXA6c8L1n
+                    usZwPysmd9y6ibFE-VVUvC3kZUxsDX_E66HSttjXpqLDOfj&env=production&sdkMeta=eyJ1cmwiOiJod
+                    HRwczovL3d3dy5wYXlwYWwuY29tL3Nkay9qcz9jbGllbnQtaWQ9QWV3clpHQ01TWDZNVVhOSVRscENJOW5xY
+                    VhBNmM4TDFudXNad1B5c21kOXk2aWJGRS1WVlV2QzNrWlV4c0RYX0U2NkhTdHRqWHBxTERPZmomaW50ZW50PW
+                    9yZGVyJmNvbXBvbmVudHM9YnV0dG9ucyxmdW5kaW5nLWVsaWdpYmlsaXR5LG1hcmtzJmN1cnJlbmN5PVVTRCI
+                    sImF0dHJzIjp7ImRhdGEtdWlkIjoidWlkX3JmaGJ5YWh2cGxydGhubWlzY3ZwbmRuZnNpZnZyYiJ9fQ&count
+                    ry.x=US&xcomponent=1&version=5.0.463"><img src="logo/pay.png" alt="paypal"></a></button>
+                <p class="text-slate-500 text-xs">By selecting one of the above payment options,<br> you 
+                     confirm that you have read, understand, and agree<br> to 
+                      Nike’s Terms of Use, Terms of Sale and Return Policy,<br> and 
+                       acknowledge Nike’s Privacy Policy.
+                </p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer id="footer" class="max-w-full bg-white text-black text-base mt-12">
+        <hr class="mx-auto bg-slate-900 w-full mt-12 mb-12">
+        <div class="hidden sm:block">
+            <section class="max-w-full m-5 gap-8 flex flex-col sm:flex-row justify-between p-6">
+                <nav class="flex flex-col gap-4 p-6 text-slate-500" aria-label="footer">
+                    <h4 class="text-sm text-black">Resources</h4>
+                    <a class="mt-4" href="shop.html">Gift cards</a>
+                    <a href="find.html">Find a Store</a>
+                    <a href="#about">Membership</a>
+                    <a href="#about">Nike x NBA</a>
+                    <a href="#about">Nike Journal</a>
+                    <a href="#about">Site Feedback</a>
+                </nav>
+     
+                <nav class="flex flex-col gap-4 p-6 text-slate-500" aria-label="footer">
+                    <h4 class="text-sm text-black">Help</h4>
+                    <a class="mt-4" href="#forartists">Get Help</a>
+                    <a href="#developers">Order Status</a>
+                    <a href="#advertising">Shipping and Delivery</a>
+                    <a href="#investors">Returns</a>
+                    <a href="#vendors">Order Cancelation</a>
+                    <a href="#vendors">Payment Option</a>
+                    <a href="#vendors">Gift card Balance</a>
+                    <a href="#vendors">Contact Us</a>
+                </nav>
+    
+                <nav class="flex flex-col gap-4 p-6 text-slate-500" aria-label="footer">
+                    <h4 class="text-sm text-black">Company</h4>
+                    <a class="mt-4" href="support.html">About Nike</a>
+                    <a href="#webplayer">News</a>
+                    <a href="#freemobile">Career</a>
+                    <a href="#webplayer">Investors</a>
+                    <a href="#webplayer">Purpose</a>
+                    <a href="#webplayer">Sustainability</a>
+                </nav>
+    
+                <nav class="flex flex-col gap-4 p-6 text-slate-500" aria-label="footer">
+                    <h4 class="text-sm text-black">Promotion & Discounts</h4>
+                    <a class="mt-4" href="individual.html">Student</a>
+                    <a href="#developers">Military</a>
+                    <a href="family.html">Teacher</a>
+                    <a href="student.html">First Responders and Medical <br> Proffesionals</a>
+                    <a href="#vendors" class="hover:opacity-90 mb-12">Birthdays</a>
+                </nav>
+    
+                <a class="text-slate-500 p-6"  href="#country">🌎United States</a>
+                   
+            </section>
+        </div>
+<!-- mobile -->
+        <div class="md:hidden">
+            <section class="max-w-full m-5 gap-8 flex flex-col sm:flex-row justify-between p-6">
+                <details class="my-8">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Resources</summary>
+                    <p class="max-w-6xl text-xs sm:text-base mt-4 sm:text-left text-black">Gift cards</p>
+                    <p><a href="find.html">Find a Store</a></p>
+                    <p><a href="#about">Membership</a></p>
+                    <p><a href="#about">Nike x NBA</a></p>
+                    <p><a href="#about">Nike Journal</a></p>
+                    <p><a href="#about">Site Feedback</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+    
+                <details class="my-8">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Help</summary>
+                    <p><a class="mt-4" href="#forartists">Get Help</a></p>
+                    <p><a href="#developers">Order Status</a></p>
+                    <p><a href="#advertising">Shipping and Delivery</a></p>
+                    <p><a href="#investors">Returns</a></p>
+                    <p><a href="#vendors">Order Cancelation</a></p>
+                    <p><a href="#vendors">Payment Option</a></p>
+                    <p><a href="#vendors">Gift card Balance</a></p>
+                    <p><a href="#vendors">Contact Us</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+    
+                <details class="my-8">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Company</summary>
+                    <p><a class="mt-4" href="support.html">About Nike</a></p>
+                    <p><a href="#webplayer">News</a></p>
+                    <p><a href="#freemobile">Career</a></p>
+                    <p><a href="#webplayer">Investors</a></p>
+                    <p><a href="#webplayer">Purpose</a></p>
+                    <p><a href="#webplayer">Sustainability</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+    
+                <details class="my-8">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Promotion & Discounts</summary>
+                    <p><a class="mt-4" href="individual.html">Student</a></p>
+                    <p><a href="#developers">Military</a></p>    
+                    <p><a href="family.html">Teacher</a></p> 
+                    <p><a href="student.html">First Responders and Medical <br> Proffesionals</a></p>
+                    <p><a href="#vendors" class="hover:opacity-90 mb-12">Birthdays</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+    
+                <a class="text-slate-500"  href="#country">🌎United States</a>
+
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+            </section>
+        </div>
+        
+
+        <section class="flex flex-row sm:flex-row max-w-full p-6">
+            <nav class="flex flex-col sm:flex-row gap-4 text-xs p- text-slate-500 mb-12" aria-label="footer">
+                <a href="#legal">© 2024 Nike, Inc. All Rights Reserved</a>
+                <details class="text-slate-500 text-xs">
+                    <summary>Guides</summary>
+                    <ol class="text-xs">
+                        <li><a href="#privacy">Nkie Air </a></li>
+                        <li><a href="#privacy">Nkie Air Force</a></li>
+                        <li><a href="#privacy">Nkie Air Max</a></li>
+                        <li><a href="#privacy">Nike Flyeasy</a></li>
+                        <li><a href="#privacy">Nike FlyNite</a></li>
+                        <li><a href="#privacy">Nike React</a></li>
+                        <li><a href="#privacy">Nike Free</a></li>
+                    </ol>
+                </details>
+                <a href="#privacy">Terms of Sale</a>
+                <a href="#privacy">Terms of Use</a>
+                <a href="#aboutads">Nike Privacy Policy</a>
+                <a href="#accessibility">Your Privacy Choices</a>
+                <a href="#accessibility">CA Supply Chains Act</a>
+            </nav>
+        </section>
+    </footer>
+
+</body>
+</html>

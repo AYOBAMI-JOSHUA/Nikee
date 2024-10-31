@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en" class="sm:scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop.nike</title>
+    <link rel="icon" href="favicon/favicon4.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body class="min-h-full  border-r-slate-50 dark:bg-black dark:text-white">
+    <header class="bg-white text-white sticky top-0 z-10">
+        <div class="hidden sm:block">
+            <section class="flex bg-slate-950 dark:bg-slate-950 max-w-5xl mx-auto justify-between items-center px-6">
+                <h1 class="flex gap-4">
+                    <a href="#hero"><img src="logo/jordan.png" alt="jordan"></a>
+                    <a href="#hero"><img src="logo/star.png" alt="star"></a>
+                </h1>
+               
+                <div>
+                    <nav class="flex-row hidden md:block text-xs text-black m-3" aria-label="main">
+                        <a href="find.html" class="hover:opacity-90">Find a Store</a>
+                        |
+                        <a href="help.html" class="hover:opacity-90">Help</a>
+                        |
+                        <a href="#contact" class="hover:opacity-90">Join Us</a>
+                        |
+                        <a href="#contact" class="hover:opacity-90">Sign In</a>
+                    </nav>
+                </div>
+            </section>
+        </div>
+        <hr class="hidden sm:block mx-auto bg-slate-900 w-full mt-12 ">
+        
+
+        <section class="max-w-full mx-auto flex justify-between items-center p-3">
+            <h1 class="px-6">
+                <a href="index.html"><img class="ml-16 w-10" src="favicon/favicon.png" alt="jordan"></a>
+            </h1>
+           
+            <div>
+                <nav class="hidden md:block space-x-8 font-medium text-xs text-black" aria-label="main">
+                    <a href="shop.html" class="hover:opacity-90">New</a>
+                    <a href="men.html" class="hover:opacity-90">Men</a>
+                    <a href="women.html" class="hover:opacity-90">Women</a>
+                    <a href="shop.html" class="hover:opacity-90">Kids</a>
+                    <a href="jordan.html" class="hover:opacity-90">Jordan</a>
+                    <a href="shop.html" class="hover:opacity-90">Sales</a>
+                </nav>
+            </div>
+
+            <h1 class="flex gap-4 px-6">
+                <form class="my-8 hidden sm:block">
+                    <input class="w-full rounded text-base bg-slate-500" type="email" placeholder="&#128269; Search">
+                </form>
+            
+                <a class="md:hidden w-8" href="#hero"><img src="logo/magnify.png" alt="jordan"></a>
+                <a class="md:hidden w-8" href="#hero"><img src="logo/login.png" alt="jordan"></a>
+                <a class="flex flex-row" href="#hero"><img src="logo/heart.png" alt="heart"></a>
+                <a class="w-8 flex flex-row" href="cart.html">
+                    <button id="save-btn" onclick="save()"></button>
+                    <img src="logo/bag.png" alt="bag">
+                    <h2 class="text-black" id="count-el"></h2>
+                </a>
+            </h1>
+
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-2xl text-black cursor-pointer relative w-8 h-8">
+                    &#9776;
+                </button>
+            </div>
+        </section>
+
+        <section id="mobile-menu" class="absolute top-0 bg-white w-full text-3xl flex-col  justify-center origin-top animate-open-menu hidden">
+            <button class="text-5xl text-black self-end px-6">
+                &times;
+            </button>
+            <nav class="flex flex-col min-h-screen items-center py-8 text-black" aria-label="mobile">
+                <a href="shop.html" class="w-full text-center py-6 hover:opacity-90">New & Featured</a>
+                <a href="men.html" class="w-full text-center py-6 hover:opacity-90">Men</a>
+                <a href="women.html" class="w-full text-center py-6 hover:opacity-90">Women</a>
+                <a href="shop.html" class="w-full text-center py-6 hover:opacity-90">Kids</a>
+                <a href="jordan.html" class="w-full text-center py-6 hover:opacity-90">Jordan</a>
+                <a href="shop.html" class="w-full text-center py-6 hover:opacity-90 mb-12">Sales</a>
+            </nav>
+        </section>
+        <section class="absolute top-68 bg-white w-1/3 flex-col  justify-center origin-top overflow-y-auto px-6 mt-12 hidden sm:block">
+            <h2 class="text-2xl font-mono text-black font-medium px-6">New Releases</h2>
+            <p class="text-black text-xl font-medium px-6 py-6 flex flex-row gap-4">Pick Up Today <input type="radio" id="savedcard" name="card"></p>
+            
+            <nav class="flex flex-col min-h-screen text-black px-6 text-lg font-medium" aria-label="mobile">
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full px-6">
+                <a href="#metcon" class="w-full hover:opacity-90 mt-4">Shoes</a>
+                <a href="#woven" class="w-full hover:opacity-90">Tops & T-Shirts</a>
+                <a href="women.html" class="w-full hover:opacity-90">Shorts</a>
+                <a href="shop.html" class="w-full hover:opacity-90">Hoodies & Pull-overs</a>
+                <a href="#woven" class="w-full hover:opacity-90">Jackets & Vest</a>
+                <a href="#leggings" class="w-full hover:opacity-90">Pants & Tights</a>
+                <a href="shop.html" class="w-full hover:opacity-90">Socks</a>
+                <a href="shop.html" class="w-full hover:opacity-90 mb-12">Accessories & <br> equipments</a>
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full px-6">
+
+                <details class="mt-4">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Gender</summary>
+                    <p class="max-w-6xl text-xs sm:text-base mt-4 sm:text-left text-black"><input type="radio" id="savedcard" name="card"> Men</p>
+                    <p><a href="find.html"><input type="radio" id="savedcard" name="card">Women</a></p>
+                    <p><a href="#about"><input type="radio" id="savedcard" name="card"> Unisex</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+
+                <details class="mt-4">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Kids</summary>
+                    <p class="max-w-6xl text-xs sm:text-base mt-4 sm:text-left text-black"><input type="radio" id="savedcard" name="card"> Boys</p>
+                    <p><a href="find.html"><input type="radio" id="savedcard" name="card"> Girls</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+
+                <details class="mt-4">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Sale & offers</summary>
+                    <p class="max-w-6xl text-xs sm:text-base mt-4 sm:text-left text-black"><input type="radio" id="savedcard" name="card"> Sales</p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+
+                <details class="mt-4">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Brand</summary>
+                    <p class="max-w-6xl text-xs sm:text-base mt-4 sm:text-left text-black"><input type="radio" id="savedcard" name="card">Nike</p>
+                    <p class="max-w-6xl text-xs sm:text-base mt-4 sm:text-left text-black"><input type="radio" id="savedcard" name="card">Jordan</p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+            </nav>
+        </section>
+    </header>
+
+    <main class="w-full mx-auto bg-white">
+        <section id="shop" class="hidden md:block w-full justify-end p-6 space-x-8">
+            <div class="flex justify-between w-full">
+                <h2 class="text-3xl font-mono text-black font-medium mb-12"></h2>
+                <div class="flex flex-wrap flex-col gap-8 w-2/3">
+                    <div class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w" src="shopimg/NIKE+C1TY.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike C1TY "surplus" <br><span class="text-slate-500 text-lg">Shoes <br> 1 Color</span></p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$100</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/brownstone.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Coming soon</p>
+                            <p class="text-black text-base font-medium mt-8">Nike C1TY "Brownstone" <br><span class="text-slate-500 text-lg">Big kid's Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">85$</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                                
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/nikelife.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike C1TY "surplus" <br><span class="text-slate-500 text-lg">Men's Fair Isle Swoosh Sweater <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$200</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/M+NL+CHAMOIS+DBL+KNEE+PANT.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike life <br><span class="text-slate-500 text-lg">Men's chamois doubleknee <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$155</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/AIR+MAX+DN.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">sustainable materials</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Air Max DN <br><span class="text-slate-500 text-lg">Shoes <br> 6 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$160</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/Orignal Nike Air Max DN Black 1-1080x1440.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike life <br><span class="text-slate-500 text-lg">Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$100</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/nike-air-vapormax.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">just in</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Air VaporMax Plus<br><span class="text-slate-500 text-lg">Men's Shoes <br> 2 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$210</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/wovenjacket.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Tech <br><span class="text-slate-500 text-lg">Men's Woven Jacket <br> 6 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$145</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/oversizedpants.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike C1TY Tech <br><span class="text-slate-500 text-lg">Men's Oversized Pants <br> 6 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$260</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/vapoufly3.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Member Product</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Vaporfly 3 <br><span class="text-slate-500 text-lg">women's Road Racing Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$260</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/vapoufly3orange.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Member Product</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Vaporfly 3 <br><span class="text-slate-500 text-lg">women's Road Racing Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$260</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/vapoufly3pink.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Member Product</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Vaporfly 3 <br><span class="text-slate-500 text-lg">women's Road Racing Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$260</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div id="woven" class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/windrunner.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Sustainable Materilas</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Tech <br><span class="text-slate-500 text-lg">Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$135</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/fleecejackets.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Sustainable Material</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Tech Windrunner <br><span class="text-slate-500 text-lg">Men's Fleece Jackets <br> 3 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$160</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/fleecejoggers.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Tech <br><span class="text-slate-500 text-lg">Men's Fleece Joggers <br> 4 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$115</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div id="pegasus" class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/pegasusyellow.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Air Pegasus 2005 <br><span class="text-slate-500 text-lg">Men's Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$150</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/NIKE+AIR+PEGASUS+2005 (1).png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Air Pegasus 2005 <br><span class="text-slate-500 text-lg">Men'sShoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$150</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/NIKE+AIR+PEGASUS+2005.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Air Pegasus 2005 <br><span class="text-slate-500 text-lg">Men'sShoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$150</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/NIKE+AIR+PEGASUS+2005+EDGEpink.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Air Pegasus 2005 <br><span class="text-slate-500 text-lg">Men'sShoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$150</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/NIKE+AIR+PEGASUS+2005 (2)green.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Air Pegasus 2005 <br><span class="text-slate-500 text-lg">Men'sShoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$150</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/W+NIKE+AIR+PEGASUS+2005+C.O.Rblue.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Air Pegasus 2005 <br><span class="text-slate-500 text-lg">Men'sShoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$150</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/Nike_CDG_Air_Pegasus_2005_SP_019362black.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Air Pegasus 2005 <br><span class="text-slate-500 text-lg">Men'sShoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$150</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/M+NL+CHAMOIS+DBL+KNEE+PANT.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike tech <br><span class="text-slate-500 text-lg">CHAMOIS KNEE PANT <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$260</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/NIKE+DUNK+LOW+RETRO+SEgreen.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Dunk Low Retro SE <br><span class="text-slate-500 text-lg">Men's Shoes <br> 6 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$125</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/Original Nike Dunk Low Polar Blue-1080x1440.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Dunk Low Retro SE <br><span class="text-slate-500 text-lg">Men's Shoes <br> 6 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$125</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/NIKE+DUNK+LOW+RETROblack.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Dunk Low Retro SE <br><span class="text-slate-500 text-lg">Men's Shoes <br> 6 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$125</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/W+NIKE+DUNK+LOWbrown.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Dunk Low Retro SE <br><span class="text-slate-500 text-lg">Men's Shoes <br> 6 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$125</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/W+NIKE+DUNK+LOWwhite.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Dunk Low Retro SE <br><span class="text-slate-500 text-lg">Men's Shoes <br> 6 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$125</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/NIKE+DUNK+LOW+(GS)pink.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Dunk Low Retro SE <br><span class="text-slate-500 text-lg">Men's Shoes <br> 6 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$125</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/M+NL+CHORE+COAT.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Life <br><span class="text-slate-500 text-lg">Men's Core Coat <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$150</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/carpenterpants.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Life <br><span class="text-slate-500 text-lg">Men's Carpenter Pants <br> 2 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$130</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/LEBRON+XXII.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Comin soon</p>
+                            <p class="text-black text-base font-medium mt-8">LEBRON XXII "Crown Jewel" <br><span class="text-slate-500 text-lg">Basketball Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$130</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/ja2blck.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">comming soon</p>
+                            <p class="text-black text-base font-medium mt-8">Ja 2 "Nightmare" <br><span class="text-slate-500 text-lg">Basketball Shoes <br> 2 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$130</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div id="ja2" class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/puple.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">comming soon</p>
+                            <p class="text-black text-base font-medium mt-8">Ja 2 "Nightmare" <br><span class="text-slate-500 text-lg">BasketballShoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$130</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/JA+2+NIGHTMARE.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">comming soon</p>
+                            <p class="text-black text-base font-medium mt-8">Ja 2 "Nightmare" <br><span class="text-slate-500 text-lg">BasketballShoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$130</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/JA+2+PREHEAT+EP.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">comming soon</p>
+                            <p class="text-black text-base font-medium mt-8">Ja 2 "Nightmare" <br><span class="text-slate-500 text-lg">BasketballShoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$130</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div id="bra" class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/br1.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Bras <br><span class="text-slate-500 text-lg">Women's Bras <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$160</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/bra2,png.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Bras <br><span class="text-slate-500 text-lg">Women's Bras <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$160</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/bra3.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Bras <br><span class="text-slate-500 text-lg">Women's Bras <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$60</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>                       
+                        </div> 
+                    </div>
+
+                    <div id="jordan4" class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/jordan1.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Jordan 4 <br><span class="text-slate-500 text-lg">Basketball Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$260</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/jordan2.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Jordan 4 <br><span class="text-slate-500 text-lg">Basketball Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$260</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/jordan3.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Jordan 4 <br><span class="text-slate-500 text-lg">Basketball Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$260</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div id="leggings" class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/leggins1.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Life <br><span class="text-slate-500 text-lg">Women's Leggings <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$55</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>                        
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/legins2.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Life <br><span class="text-slate-500 text-lg">Women's Leggings <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$55</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>                        
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/legins3.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Life <br><span class="text-slate-500 text-lg">Women's Leggings <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$55</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>                        
+                        </div> 
+                    </div>
+
+                    <div id="vomero" class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/vomero1.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Zoom Vomero 5 <br><span class="text-slate-500 text-lg">Men's Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$170</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/vomero2.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Zoom Vomero 5 <br><span class="text-slate-500 text-lg">Men'sShoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$170</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/vomero3.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Zoom Vomero 5 <br><span class="text-slate-500 text-lg">Men'sShoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$170</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div id="metcon" class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/metcon1.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Metcon 3 <br><span class="text-slate-500 text-lg">Men's Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$225</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/metcon2,png.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Metcon 3 <br><span class="text-slate-500 text-lg">Men's Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$225</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/metcon3.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Metcon 3 <br><span class="text-slate-500 text-lg">Men's Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$225</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div> 
+                    </div>
+
+                    <div id="tatum" class="flex flex-col sm:flex-row gap-4 py-6">
+                        <div>
+                            <img class="w-16" src="shopimg/tatumblack.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Tatum 3 <br><span class="text-slate-500 text-lg">Men's Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$360</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/tatumgreen.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Tatum 3 <br><span class="text-slate-500 text-lg">Men's Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$360</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div>
+                        <div>
+                            <img class="w-16" src="shopimg/tatumyellow.png" alt="">
+                            <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                            <p class="text-black text-base font-medium mt-8">Nike Tatum 3 <br><span class="text-slate-500 text-lg">Men's Shoes <br> 1 Color</span> </p>
+                            <div class="flex flex-row gap-8 mt-4 justify-between">
+                                <p class="text-black text-2xl font-medium">$360</p>
+                                <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                            </div>
+                        </div> 
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </section>
+<!-- mobile -->
+<section id="shop" class="md:hidden w-full justify-end p-6 space-x-8">
+    <div class="flex justify-between w-full">
+        <h2 class="text-3xl font-mono text-black font-medium mb-12"></h2>
+        <div class="flex flex-wrap flex-col gap-8 w-full">
+            <div class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/NIKE+C1TY.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike C1TY "surplus" <br><span class="text-slate-500 text-lg">Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$100</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>10
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/brownstone.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Coming soon</p>
+                    <p class="text-black text-base font-medium mt-8">Nike C1TY "Brownstone" <br><span class="text-slate-500 text-lg">Big kid's Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$50</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/nikelife.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike C1TY "surplus" <br><span class="text-slate-500 text-lg">Men's Fair Isle Swoosh Sweater <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$360</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/M+NL+CHAMOIS+DBL+KNEE+PANT.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike life <br><span class="text-slate-500 text-lg">Men's chamois doubleknee <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$550</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/AIR+MAX+DN.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">sustainable materials</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Air Max DN <br><span class="text-slate-500 text-lg">Shoes <br> 6 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$600</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/Orignal Nike Air Max DN Black 1-1080x1440.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike life <br><span class="text-slate-500 text-lg">Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$100</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/nike-air-vapormax.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">just in</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Air VaporMax Plus<br><span class="text-slate-500 text-lg">Men's Shoes <br> 2 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$210</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/wovenjacket.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Tech <br><span class="text-slate-500 text-lg">Men's Woven Jacket <br> 6 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$140</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/oversizedpants.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike C1TY Tech <br><span class="text-slate-500 text-lg">Men's Oversized Pants <br> 6 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$260</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </di
+                    </a>
+                </div> 
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/vapoufly3.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Member Product</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Vaporfly 3 <br><span class="text-slate-500 text-lg">women's Road Racing Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$260</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/vapoufly3orange.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Member Product</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Vaporfly 3 <br><span class="text-slate-500 text-lg">women's Road Racing Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$260</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/vapoufly3pink.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Member Product</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Vaporfly 3 <br><span class="text-slate-500 text-lg">women's Road Racing Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$260</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div> 
+            </div>
+
+            <div id="woven2" class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/windrunner.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Sustainable Materilas</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Tech <br><span class="text-slate-500 text-lg">Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$130</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/fleecejackets.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Sustainable Material</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Tech Windrunner <br><span class="text-slate-500 text-lg">Men's Fleece Jackets <br> 3 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$160</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/fleecejoggers.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Tech <br><span class="text-slate-500 text-lg">Men's Fleece Joggers <br> 4 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$110</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div> 
+            </div>
+
+            <div id="pegasus2" class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/pegasusyellow.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Air Pegasus 2005 <br><span class="text-slate-500 text-lg">Men's Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$150</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/NIKE+AIR+PEGASUS+2005 (1).png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Air Pegasus 2005 <br><span class="text-slate-500 text-lg">Men'sShoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$150</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/NIKE+AIR+PEGASUS+2005.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Air Pegasus 2005 <br><span class="text-slate-500 text-lg">Men'sShoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$150</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/NIKE+AIR+PEGASUS+2005+EDGEpink.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Air Pegasus 2005 <br><span class="text-slate-500 text-lg">Men'sShoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$150</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/NIKE+AIR+PEGASUS+2005 (2)green.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Air Pegasus 2005 <br><span class="text-slate-500 text-lg">Men'sShoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$150</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/W+NIKE+AIR+PEGASUS+2005+C.O.Rblue.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Air Pegasus 2005 <br><span class="text-slate-500 text-lg">Men'sShoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$150</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/Nike_CDG_Air_Pegasus_2005_SP_019152black.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Air Pegasus005 <br><span class="text-slate-500 text-lg">Men'sShoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$150</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/M+NL+CHAMOIS+DBL+KNEE+PANT.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike tech <br><span class="text-slate-500 text-lg">CHAMOIS KNEE PANT <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$360</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/NIKE+DUNK+LOW+RETRO+SEgreen.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Dunk Low Retro SE <br><span class="text-slate-500 text-lg">Men's Shoes <br> 6 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$120</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/Original Nike Dunk Low Polar Blue-1080x1440.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Dunk Low Retro SE <br><span class="text-slate-500 text-lg">Men's Shoes <br> 6 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$120</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/NIKE+DUNK+LOW+RETROblack.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Dunk Low Retro SE <br><span class="text-slate-500 text-lg">Men's Shoes <br> 6 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$120</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/W+NIKE+DUNK+LOWbrown.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Dunk Low Retro SE <br><span class="text-slate-500 text-lg">Men's Shoes <br> 6 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$120</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/W+NIKE+DUNK+LOWwhite.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Dunk Low Retro SE <br><span class="text-slate-500 text-lg">Men's Shoes <br> 6 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$120</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/NIKE+DUNK+LOW+(GS)pink.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Dunk Low Retro SE <br><span class="text-slate-500 text-lg">Men's Shoes <br> 6 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$120</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/M+NL+CHORE+COAT.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Life <br><span class="text-slate-500 text-lg">Men's Core Coat <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$150</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div> 
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/carpenterpants.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Life <br><span class="text-slate-500 text-lg">Men's Carpenter Pants <br> 2 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$130</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </di
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/LEBRON+XXII.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Comin soon</p>
+                    <p class="text-black text-base font-medium mt-8">LEBRON XXII "Crown Jewel" <br><span class="text-slate-500 text-lg">Basketball Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$130</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/ja2blck.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">comming soon</p>
+                    <p class="text-black text-base font-medium mt-8">Ja 2 "Nightmare" <br><span class="text-slate-500 text-lg">Basketball Shoes <br> 2 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$130</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div> 
+            </div>
+
+            <div id="ja22" class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/puple.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">comming soon</p>
+                    <p class="text-black text-base font-medium mt-8">Ja 2 "Nightmare" <br><span class="text-slate-500 text-lg">BasketballShoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$130</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/JA+2+NIGHTMARE.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">comming soon</p>
+                    <p class="text-black text-base font-medium mt-8">Ja 2 "Nightmare" <br><span class="text-slate-500 text-lg">BasketballShoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$130</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/JA+2+PREHEAT+EP.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">comming soon</p>
+                    <p class="text-black text-base font-medium mt-8">Ja 2 "Nightmare" <br><span class="text-slate-500 text-lg">BasketballShoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$130</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div> 
+            </div>
+
+            <div id="bra2" class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/br1.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Bras <br><span class="text-slate-500 text-lg">Women's Bras <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$160</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/bra2,png.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Bras <br><span class="text-slate-500 text-lg">Women's Bras <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$160</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/bra3.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Bras <br><span class="text-slate-500 text-lg">Women's Bras <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$60</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>                    
+                </div> 
+            </div>
+
+            <div id="jordan42" class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/jordan1.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Jordan 4 <br><span class="text-slate-500 text-lg">Basketball Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$260</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/jordan2.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Jordan 4 <br><span class="text-slate-500 text-lg">Basketball Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$260</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/jordan3.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Jordan 4 <br><span class="text-slate-500 text-lg">Basketball Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$260</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                </div> 
+            </div>
+
+            <div id="leggings2" class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/leggins1.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Life <br><span class="text-slate-500 text-lg">Women's Leggings <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$55</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>                 
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/legins2.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Life <br><span class="text-slate-500 text-lg">Women's Leggings <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$55</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>                
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/legins3.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Life <br><span class="text-slate-500 text-lg">Women's Leggings <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$55</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>            
+                </div> 
+            </div>
+
+            <div id="vomero2" class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/vomero1.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Zoom Vomero 5 <br><span class="text-slate-500 text-lg">Men's Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p clss="text-black text-2xl font-medium">$170</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/vomero2.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Zoom Vomero 5 <br><span class="text-slate-500 text-lg">Men'sShoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$170</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/vomero3.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Zoom Vomero 5 <br><span class="text-slate-500 text-lg">Men'sShoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$170</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                </div> 
+            </div>
+
+            <div id="metcon2" class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/metcon1.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Metcon 3 <br><span class="text-slate-500 text-lg">Men's Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$220</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/metcon2,png.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Metcon 3 <br><span class="text-slate-500 text-lg">Men's Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$220</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/metcon3.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Metcon 3 <br><span class="text-slate-500 text-lg">Men's Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$220</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                </div> 
+            </div>
+
+            <div id="tatum2" class="flex flex-col sm:flex-row gap-4 py-6">
+                <div>
+                    <img class="w-full" src="shopimg/tatumblack.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Tatum 3 <br><span class="text-slate-500 text-lg">Men's Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$360</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                    </a>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/tatumgreen.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Tatum 3 <br><span class="text-slate-500 text-lg">Men's Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$360</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                </div>
+                <div>
+                    <img class="w-full" src="shopimg/tatumyellow.png" alt="">
+                    <p class="text-slate-900 text-base font-medium mt-8">Just In</p>
+                    <p class="text-black text-base font-medium mt-8">Nike Tatum 3 <br><span class="text-slate-500 text-lg">Men's Shoes <br> 1 Color</span> </p>
+                    <div class="flex flex-row gap-8 mt-4 justify-between">
+                        <p class="text-black text-2xl font-medium">$360</p>
+                        <button onclick="add()" class="bg-white px-6 font-medium text-black rounded-3xl border border-slate-900 dark:border-none"><img src="logo/plus.png" alt=""></button>
+                    </div>
+                </div> 
+            </div>
+            
+        </div>
+    </div>
+    
+</section>
+    </main>
+
+    <footer id="footer" class="max-w-full bg-white text-black text-base mt-12">
+        <hr class="mx-auto bg-slate-900 w-full mt-12 mb-12">
+        <div class="hidden sm:block">
+            <section class="max-w-full m-5 gap-8 flex flex-col sm:flex-row justify-between p-6">
+                <nav class="flex flex-col gap-4 p-6 text-slate-500" aria-label="footer">
+                    <h4 class="text-sm text-black">Resources</h4>
+                    <a class="mt-4" href="#about">Gift cards</a>
+                    <a href="find.html">Find a Store</a>
+                    <a href="#about">Membership</a>
+                    <a href="#about">Nike x NBA</a>
+                    <a href="#about">Nike Journal</a>
+                    <a href="#about">Site Feedback</a>
+                </nav>
+     
+                <nav class="flex flex-col gap-4 p-6 text-slate-500" aria-label="footer">
+                    <h4 class="text-sm text-black">Help</h4>
+                    <a class="mt-4" href="help.html">Get Help</a>
+                    <a href="#developers">Order Status</a>
+                    <a href="#advertising">Shipping and Delivery</a>
+                    <a href="#investors">Returns</a>
+                    <a href="#vendors">Order Cancelation</a>
+                    <a href="#vendors">Payment Option</a>
+                    <a href="#vendors">Gift card Balance</a>
+                    <a href="#vendors">Contact Us</a>
+                </nav>
+    
+                <nav class="flex flex-col gap-4 p-6 text-slate-500" aria-label="footer">
+                    <h4 class="text-sm text-black">Company</h4>
+                    <a class="mt-4" href="support.html">About Nike</a>
+                    <a href="#webplayer">News</a>
+                    <a href="#freemobile">Career</a>
+                    <a href="#webplayer">Investors</a>
+                    <a href="#webplayer">Purpose</a>
+                    <a href="#webplayer">Sustainability</a>
+                </nav>
+    
+                <nav class="flex flex-col gap-4 p-6 text-slate-500" aria-label="footer">
+                    <h4 class="text-sm text-black">Promotion & Discounts</h4>
+                    <a class="mt-4" href="individual.html">Student</a>
+                    <a href="#developers">Military</a>
+                    <a href="family.html">Teacher</a>
+                    <a href="student.html">First Responders and Medical <br> Proffesionals</a>
+                    <a href="#vendors" class="hover:opacity-90 mb-12">Birthdays</a>
+                </nav>
+    
+                <a class="text-slate-500 p-6"  href="#country">🌎United States</a>
+                   
+            </section>
+        </div>
+<!-- mobile -->
+        <div class="md:hidden">
+            <section class="max-w-full m-5 gap-8 flex flex-col sm:flex-row justify-between p-6">
+                <details class="my-8">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Resources</summary>
+                    <p class="max-w-6xl text-xs sm:text-base mt-4 sm:text-left text-black">Gift cards</p>
+                    <p><a href="find.html">Find a Store</a></p>
+                    <p><a href="#about">Membership</a></p>
+                    <p><a href="#about">Nike x NBA</a></p>
+                    <p><a href="#about">Nike Journal</a></p>
+                    <p><a href="#about">Site Feedback</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+    
+                <details class="my-8">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Help</summary>
+                    <p><a class="mt-4" href="find.html">Get Help</a></p>
+                    <p><a href="#developers">Order Status</a></p>
+                    <p><a href="#advertising">Shipping and Delivery</a></p>
+                    <p><a href="#investors">Returns</a></p>
+                    <p><a href="#vendors">Order Cancelation</a></p>
+                    <p><a href="#vendors">Payment Option</a></p>
+                    <p><a href="#vendors">Gift card Balance</a></p>
+                    <p><a href="#vendors">Contact Us</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+    
+                <details class="my-8">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Company</summary>
+                    <p><a class="mt-4" href="support.html">About Nike</a></p>
+                    <p><a href="#webplayer">News</a></p>
+                    <p><a href="#freemobile">Career</a></p>
+                    <p><a href="#webplayer">Investors</a></p>
+                    <p><a href="#webplayer">Purpose</a></p>
+                    <p><a href="#webplayer">Sustainability</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+    
+                <details class="my-8">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Promotion & Discounts</summary>
+                    <p><a class="mt-4" href="individual.html">Student</a></p>
+                    <p><a href="#developers">Military</a></p>    
+                    <p><a href="family.html">Teacher</a></p> 
+                    <p><a href="student.html">First Responders and Medical <br> Proffesionals</a></p>
+                    <p><a href="#vendors" class="hover:opacity-90 mb-12">Birthdays</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+    
+                <a class="text-slate-500"  href="#country">🌎United States</a>
+
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+            </section>
+        </div>
+        
+
+        <section class="flex flex-row sm:flex-row max-w-full p-6">
+            <nav class="flex flex-col sm:flex-row gap-4 text-xs p- text-slate-500 mb-12" aria-label="footer">
+                <a href="#legal">© 2024 Nike, Inc. All Rights Reserved</a>
+                <details class="text-slate-500 text-xs">
+                    <summary>Guides</summary>
+                    <ol class="text-xs">
+                        <li><a href="shop.html">Nike Air </a></li>
+                        <li><a href="shop.html">Nike Air Force</a></li>
+                        <li><a href="shop.html">Nike Air Max</a></li>
+                        <li><a href="shop.html">Nike Flyeasy</a></li>
+                        <li><a href="shop.html">Nike FlyNite</a></li>
+                        <li><a href="shop.html">Nike React</a></li>
+                        <li><a href="shop.html">Nike Free</a></li>
+                    </ol>
+                </details>
+                <a href="shop.html">Terms of Sale</a>
+                <a href="shop.html">Terms of Use</a>
+                <a href="#aboutads">Nike Privacy Policy</a>
+                <a href="#accessibility">Your Privacy Choices</a>
+                <a href="#accessibility">CA Supply Chains Act</a>
+            </nav>
+        </section>
+    </footer>
+
+</body>
+</html>

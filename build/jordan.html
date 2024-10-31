@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en" class="sm:scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jordan.nike</title>
+    <link rel="icon" href="favicon/favicon4.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body class="min-h-full  border-r-slate-50 dark:bg-black dark:text-white">
+    <header class="bg-white text-white top-0 z-10 sticky">
+        <div class="hidden sm:block">
+            <section class="flex bg-slate-950 dark:bg-slate-950 max-w-5xl mx-auto justify-between items-center px-6">
+                <h1 class="flex gap-4">
+                    <a href="jordan.html"><img src="logo/jordan.png" alt="jordan"></a>
+                    <a href="#hero"><img src="logo/star.png" alt="star"></a>
+                </h1>
+               
+                <div>
+                    <nav class="flex-row hidden md:block text-xs text-black m-3" aria-label="main">
+                        <a href="find.html" class="hover:opacity-90">Find a Store</a>
+                        |
+                        <a href="help.html" class="hover:opacity-90">Help</a>
+                        |
+                        <a href="join" class="hover:opacity-90">Join Us</a>
+                        |
+                        <a href="#contact" class="hover:opacity-90">Sign In</a>
+                    </nav>
+                </div>
+            </section>
+        </div>
+        <hr class="hidden sm:block mx-auto bg-slate-900 w-full mt-12 ">
+        
+
+        <section class="max-w-full mx-auto flex justify-between items-center p-3">
+            <h1 class="px-6">
+                <a href="index.html"><img class="ml-16 w-10" src="favicon/favicon.png" alt="jordan"></a>
+            </h1>
+           
+            <div>
+                <nav class="hidden md:block space-x-8 font-medium text-xs text-black" aria-label="main">
+                    <a href="shop.html" class="hover:opacity-90">New</a>
+                    <a href="men.html" class="hover:opacity-90">Men</a>
+                    <a href="women.html" class="hover:opacity-90">Women</a>
+                    <a href="shop.html" class="hover:opacity-90">Kids</a>
+                    <a href="jordan.html" class="hover:opacity-90">Jordan</a>
+                    <a href="shop.html" class="hover:opacity-90">Sales</a>
+                </nav>
+            </div>
+
+            <h1 class="flex gap-4 px-6">
+                <form class="my-8 hidden sm:block">
+                    <input class="w-full rounded text-base bg-slate-500" type="email" placeholder="&#128269; Search">
+                </form>
+            
+                <a class="md:hidden w-8" href="#hero"><img src="logo/magnify.png" alt="jordan"></a>
+                <a class="md:hidden w-8" href="#hero"><img src="logo/login.png" alt="jordan"></a>
+                <a class="w-8" href="#hero"><img src="logo/heart.png" alt="jordan"></a>
+                <a id="save-btn" onclick="save()" class="w-8 flex flex-row" href="cart.html"><img src="logo/bag.png" alt="bag"><h2 class="text-black" id="count-el"></h2></a>
+
+            </h1>
+
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-2xl text-black cursor-pointer relative w-8 h-8">
+                    &#9776;
+                </button>
+            </div>
+        </section>
+
+        <section id="mobile-menu" class="absolute top-0 bg-white w-full text-3xl flex-col  justify-center origin-top animate-open-menu hidden">
+            <button class="text-5xl text-black self-end px-6">
+                &times;
+            </button>
+            <nav class="flex flex-col min-h-screen items-center py-8 text-black" aria-label="mobile">
+                <a href="shop.html" class="w-full text-center py-6 hover:opacity-90">New & Featured</a>
+                <a href="men.html" class="w-full text-center py-6 hover:opacity-90">Men</a>
+                <a href="women.html" class="w-full text-center py-6 hover:opacity-90">Women</a>
+                <a href="shop.html" class="w-full text-center py-6 hover:opacity-90">Kids</a>
+                <a href="jordan.html" class="w-full text-center py-6 hover:opacity-90">Jordan</a>
+                <a href="shop.html" class="w-full text-center py-6 hover:opacity-90 mb-12">Sales</a>
+            </nav>
+            
+        </section>
+    </header>
+
+    <main class="w-full mx-auto bg-white">
+        <hr class="mx-auto bg-slate-900 w-full mt-12">
+        <section id="hero" class="flex flex-row bg-black w-full max-h-10 scroll-m-40 justify-center">
+            <button onclick="switchback()"><</button>
+            <h1 id="sale-el" class="text-center p-3"><a class="underline text-white text-xs font-medium" href="shop.html">Members: Free shipping on orders $50+</a></h1>
+            <button onclick="switchfront()">></button>
+        </section>
+        <hr class="mx-auto bg-slate-900 w-full mt-12 mb-12">
+        <section id="hero" class="w-full max-h-10 mb-12 scroll-m-40 justify-center mt-12 px-6">
+            <article class="w-full flex flex-col items-center px-6">
+                <h2 class="text-2xl font-mono text-black px-6 font-medium mb-12 text-center"><img src="img/jordan2.png" alt="jordan"></h2>
+                <nav class="hidden md:block space-x-8 font-medium text-lg text-black mb-12" aria-label="main">
+                    <a href="shop.html" class="hover:opacity-90">New releases</a>
+                    <a href="shop.html#jordan4" class="hover:opacity-90">Jordan Basketball</a>
+                    <a href="#shop" class="hover:opacity-90">Purpose & Community</a>
+                    <a href="men.html" class="hover:opacity-90">Men</a>
+                    <a href="women" class="hover:opacity-90">Women</a>
+                    <a href="shop.html" class="hover:opacity-90">Kids</a>
+                </nav>
+            </article>
+            <nav class="md:hidden space-x-8 font-medium text-lg text-black mb-12" aria-label="main">
+                <a href="shop.html" class="hover:opacity-90">New releases</a>
+                <a href="men.html" class="hover:opacity-90">Men</a>
+                <a href="women.html" class="hover:opacity-90">Women</a>
+                <a href="#shop" class="hover:opacity-90">Kids</a>
+            </nav>
+            
+            <img class="w-full px-6" src="img/tatum3.png" alt="">
+        </section>
+
+        <section class="flex gap-4 flex-col items-center justify-center mb-12">
+            <h2 class="text-xl text-black text-center font-medium">TATUM 3</h2>
+            <h2 class="text-5xl text-black text-center font-bold">WELCOME TO THE <br> GARDEN</h2>
+            <p class="text-black text-lg sm:text-xl text-center font-medium mt-8">Growing takes work-tend to your legacy in court-ready kicks <br> this holiday season</p>
+            <button class="bg-black px-6 font-bold text-white rounded-3xl border border-slate-900 dark:border-none items-center mb-12"><a href="shop.html#tatum">Shop</a></button>
+        </section>
+
+        <section id="hero" class="w-full max-h-10 mb-12 scroll-m-40 justify-center mt-12 px-6">
+            <h2 class="flex text-3xl font-mono text-black px-6 font-bold mt-12">Featured</h2>
+            <img class="w-full px-6" src="img/air-jordan-4-retro.png" alt="">
+        </section>
+        
+        <section class="flex gap-4 flex-col mb-12 px-6 items-center">
+            <h2 class="text-xl text-black text-center font-medium">Women's air jordan 4 RM</h2>
+            <h2 class="text-5xl text-black text-center font-bold">RIDE EASY</h2>
+            <p class="text-black text-lg sm:text-xl text-center font-medium mt-8">Ride easy with a new spin on the '89 icon, reimagined for the streets of tommorrow</p>
+            <button class="bg-black px-6 font-bold text-white rounded-3xl border border-slate-900 dark:border-none items-center mb-12"><a href="shop.html#jordan4">Shop</a></button>
+        </section>
+
+        <section id="hero" class="w-full max-h-10 mb-12 scroll-m-40 justify-center mt-12 px-6 gap-8">
+            <h2 class="flex text-3xl font-mono text-black px-6 font-bold mt-12 m-5">HEAT CHECK</h2>
+            <img class="w-full px-6" src="img/heatcheck.png" alt="">
+        </section>
+        
+        <section class="flex gap-4 flex-col mb-12 px-6 items-center">
+            <h2 class="text-xl text-black text-center font-medium">Air Jordan Collection</h2>
+            <h2 class="text-5xl text-black text-center font-bold">MAKE YOUR MARK</h2>
+            <p class="text-black text-lg sm:text-xl text-center font-medium mt-8">Step out in saying you statement pieces made for saying your pieces</p>
+            <button class="bg-black px-6 font-bold text-white rounded-3xl border border-slate-900 dark:border-none items-center mb-12"><a href="shop.html#woven">Shop</a></button>
+        </section>
+
+        <section class="flex flex-row sm:flex-row max-w-full px-6">
+            <h2 class="text-5xl font-mono text-black text-center font-bold px-6 mb-12">POPULAR RIGHT NOW</h2>
+        </section>
+
+        <section class="mb-12 hidden sm:block px-6 mt-12">
+            <h2 class="text-2xl font-mono text-black px-6 font-bold mt-12 mb-12">EXPLORE MORE FROM JORDAN</h2>
+            <ul class="list-none flex gap-8 px-6">
+                <li style="background-image: url(img/snkrs.png); background-size: cover;" class="w-1/2 h-96 bg-cover sm:max-w-80 items-center flex-col border-solid border-gray-800 dark:border-gray-800 dark:bg-gray-800 py-12 px-6 shadow-xl">
+                    <h3 class="text-lg px-6 font-bold text-white mb-12">Unlock Your Range of Motion</h3>
+                    <p class="sm:text-2xl font-bold mb-12 px-6 text-black">JORDAN IN SNKRS</p>
+                    <div class="mb-12 px-6"><button class="bg-white px-6 mb-12 font-medium text-black rounded-3xl border border-slate-900 dark:border-none items-center"><a href="shop.html#jordan4">Download</a></button></div>
+                </li>
+    
+                <li style="background-image: url(img/michealjirdan.png); background-size: cover;" class="w-1/2 h-96 bg-cover sm:max-w-80 items-center flex-col border-solid border-gray-800 dark:border-gray-800 dark:bg-gray-800 py-12 px-6 shadow-xl">
+                    <h3 class="text-lg px-6 font-bold text-white mb-12">For a Subtle flex</h3>
+                    <p class="sm:text-2xl font-bold mb-12 px-6 text-black">AIr Jordan Collection</p>
+                    <div class="mb-12 px-6"><button class="bg-black px-6 mb-12 font-medium text-white rounded-3xl border border-slate-900 dark:border-none items-center"><a href="shop.html#jordan4"></a>Explore</button></div>
+                </li>
+                <li style="background-image: url(img/basket.png); background-size: cover;" class="w-1/2 h-32 bg-cover sm:max-w-80 items-center flex-col border-solid border-gray-800 dark:border-gray-800 dark:bg-gray-800 py-12 px-6 shadow-xl">
+                    <h3 class="text-lg px-6 font-bold text-black mb-12">Freedom and Stability</h3>
+                    <p class="sm:text-2xl font-bold mb-12 px-6 text-black">Jordan Basketball</p>
+                    <div class="mb-12 px-6"><button class="bg-black px-6 mb-12 font-medium text-white rounded-3xl border border-slate-900 dark:border-none items-center"><a href="shop.html#jordan4"></a>Explore</button></div>
+                </li>
+            </ul>
+            
+        </section>
+<!-- mobile -->
+        <section class="mb-12 md:hidden">
+            <ul class="list-none">
+                <li style="background-image: url(img/snkrs.png); background-size: cover;" class="w-full h-96 bg-cover sm:max-w-80 items-center flex-col border-solid border-gray-800 dark:border-gray-800 dark:bg-gray-800 py-12 px-6 shadow-xl">
+                    <h3 class="text-lg px-6 font-bold text-white mb-12">Unlock Your Range of Motion</h3>
+                    <p class="sm:text-2xl font-bold mb-12 px-6 text-black">JORDAN IN SNKRS</p>
+                    <div class="mb-12 px-6"><button class="bg-black px-6 mb-12 font-medium text-white rounded-3xl border border-slate-900 dark:border-none items-center"><a href="shop.html##jordan42">Download</a></button></div>
+                </li>
+    
+                <li style="background-image: url(img/michealjirdan.png); background-size: cover;" class="w-full h-96 bg-cover sm:max-w-80 items-center flex-col border-solid border-gray-800 dark:border-gray-800 dark:bg-gray-800 py-12 px-6 shadow-xl">
+                    <h3 class="text-lg px-6 font-bold text-white mb-12">For a Subtle flex</h3>
+                    <p class="sm:text-2xl font-bold mb-12 px-6 text-black">AIr Jordan Collection</p>
+                    <div class="mb-12 px-6"><button class="bg-black px-6 mb-12 font-medium text-white rounded-3xl border border-slate-900 dark:border-none items-center"><a href="shop.html#jordan42">Explore</a></button></div>
+                </li>
+
+                <li style="background-image: url(img/basket.png); background-size: cover;" class="w-full h-32 bg-cover sm:max-w-80 items-center flex-col border-solid border-gray-800 dark:border-gray-800 dark:bg-gray-800 py-12 px-6 shadow-xl">
+                    <h3 class="text-lg px-6 font-bold text-white mb-12">Freedom and Stability</h3>
+                    <p class="sm:text-2xl font-bold mb-12 px-6 text-black">Jordan Basketball</p>
+                    <div class="mb-12 px-6"><button class="bg-black px-6 mb-12 font-medium text-white rounded-3xl border border-slate-900 dark:border-none items-center"><a href="shop.html#jordan42">Explore</a></button></div>
+                </li>
+            </ul>
+            
+        </section>
+
+        <section class="max-w-full flex flex-col justify-between items-center p-6">
+            <div class="hidden sm:block">
+                <div class="max-w-full flex flex-col sm:flex-row justify-center p-6 gap-8">
+                    <nav class="flex flex-col gap-4 text-lg p-6 text-slate-500">
+                        <h3 class="text-xl text-black font-bold">Jordan's Shoes</h3>
+                        <a class="mt-4" href="shop.html#jordan4">Running</a>
+                        <a href="shop.html#jordan4">Basketball</a>
+                        <a href="shop.html">Golf</a>
+                        <a href="shop.html">Jordan Tennis Shoes</a>
+                    </nav>
+                    <nav class="flex flex-col gap-4 text-lg p-6 text-slate-500">
+                        <h3 class="text-xl text-black font-bold">Jordan's Clothings</h3>
+                        <a class="mt-4" href="shop.html">Top & T-Shirts</a>
+                        <a href="shop.html">Jackets</a>
+                        <a href="shop.html">Hoodies</a>
+                        <a href="shop.html">Pants</a>
+                    </nav>
+                    <nav class="flex flex-col gap-4 text-lg p-6 text-slate-500">
+                        <h3 class="text-xl text-black font-bold">Jordan's Gear</h3>
+                        <a class="mt-4" href="shop.html">All Men's Gear</a>
+                        <a href="shop.html">socks</a>
+                        <a href="shop.html">Bags</a>
+                        <a href="shop.html">Balls</a>
+                    </nav>
+                    <nav class="flex flex-col gap-4 text-lg p-6 mb-12 text-slate-500">
+                        <h3 class="text-xl text-black font-bold">Featured</h3>
+                        <a class="mt-4" href="shop.html">New Releases</a>
+                        <a href="#jobs">Clearance</a>
+                        <a href="shop.html#metcon">Metcon</a>
+                        <a href="shop.html">NFL</a>
+                    </nav>
+                </div>
+            </div>
+            
+        </section>
+<!-- mobile -->
+        <div class="md:hidden">
+            <section class="max-w-full m-5 gap-8 flex flex-col sm:flex-row justify-between p-6">
+                <details class="my-8 text-black">
+                    <summary class="font-medium text-xl text-black list-none">Jordan's Shoes</summary>
+                    <p><a href="shop.html#jordan42">Jordan's Running shoes</a></p>
+                    <p><a href="shop.html#jordan42">Jordan's Basketball shoes</a></p>
+                    <p><a href="shop.html">Golf</a></p>
+                    <p><a href="shop.html">Tennis Shoes</a></p>
+                    <p><a href="shop.html">Jordan</a></p>
+                    <p><a href="shop.html#jordan42">Football</a></p>
+                    <p><a href="shop.html">Soccer</a></p>
+                    <p><a href="shop.html#jordan42">Training</a></p>
+                </details>
+
+                <details class="my-8 text-black">
+                    <summary class="text-xl font-medium text-black list-none">Jordan's Clothings</summary>
+                    <p><a class="mt-4" href="shop.html">Top & T-Shirts</a></p>
+                    <p><a href="shop.html#woven2">Jackets</a></p>
+                    <p><a href="shop.html">Hoodies</a></p>
+                    <p><a href="shop.html">Pants</a></p>
+                    <p><a href="shop.html">Joggers</a></p>
+                    <p><a href="shop.html">Sweat Pants</a></p>
+                    <p><a href="shop.html">Shorts</a></p>
+                    <p><a href="shop.html">Jersey</a></p>
+                </details>
+
+                <details class="my-8 text-black">
+                    <summary class="text-xl font-medium text-black list-none">Jordan's Gear</summary>
+                    <p><a class="mt-4" href="shop.html">All Jordan's Gear</a></p>
+                    <p><a href="shop.html">Socks</a></p>
+                    <p><a href="shop.html">Bags</a></p>
+                    <p><a href="shop.html">Balls</a></p>
+                </details>
+
+                <details class="my-8 text-black">
+                    <summary class="text-xl font-medium text-black list-none">Featured</summary>
+                    <p class="max-w-6xl text-xs sm:text-base mt-4 sm:text-left text-black">New Releases</p>
+                    <p><a href="shop.html">Clearance</a></p>
+                    <p><a href="shop.html">Metcon</a></p>
+                    <p><a href="shop.html">NFL</a></p>
+                    <p><a href="shop.html">Men's Essentilas</a></p>
+                    <p><a href="shop.html">Best selling</a></p>
+                </details>
+            </section>
+        </div>
+
+    </main>
+
+    <footer id="footer" class="max-w-full bg-white text-black text-base mt-12">
+        <hr class="mx-auto bg-slate-900 w-full mt-12 mb-12">
+        <div class="hidden sm:block">
+            <section class="max-w-full m-5 gap-8 flex flex-col sm:flex-row justify-between p-6">
+                <nav class="flex flex-col gap-4 p-6 text-slate-500" aria-label="footer">
+                    <h4 class="text-sm text-black">Resources</h4>
+                    <a class="mt-4" href="#about">Gift cards</a>
+                    <a href="#jobs">Find a Store</a>
+                    <a href="#about">Membership</a>
+                    <a href="#about">Nike x NBA</a>
+                    <a href="#about">Nike Journal</a>
+                    <a href="#about">Site Feedback</a>
+                </nav>
+     
+                <nav class="flex flex-col gap-4 p-6 text-slate-500" aria-label="footer">
+                    <h4 class="text-sm text-black">Help</h4>
+                    <a class="mt-4" href="#forartists">Get Help</a>
+                    <a href="#developers">Order Status</a>
+                    <a href="#advertising">Shipping and Delivery</a>
+                    <a href="#investors">Returns</a>
+                    <a href="#vendors">Order Cancelation</a>
+                    <a href="#vendors">Payment Option</a>
+                    <a href="#vendors">Gift card Balance</a>
+                    <a href="#vendors">Contact Us</a>
+                </nav>
+    
+                <nav class="flex flex-col gap-4 p-6 text-slate-500" aria-label="footer">
+                    <h4 class="text-sm text-black">Company</h4>
+                    <a class="mt-4" href="support.html">About Nike</a>
+                    <a href="#webplayer">News</a>
+                    <a href="#freemobile">Career</a>
+                    <a href="#webplayer">Investors</a>
+                    <a href="#webplayer">Purpose</a>
+                    <a href="#webplayer">Sustainability</a>
+                </nav>
+    
+                <nav class="flex flex-col gap-4 p-6 text-slate-500" aria-label="footer">
+                    <h4 class="text-sm text-black">Promotion & Discounts</h4>
+                    <a class="mt-4" href="individual.html">Student</a>
+                    <a href="#developers">Military</a>
+                    <a href="family.html">Teacher</a>
+                    <a href="student.html">First Responders and Medical <br> Proffesionals</a>
+                    <a href="#vendors" class="hover:opacity-90 mb-12">Birthdays</a>
+                </nav>
+    
+                <a class="text-slate-500 p-6"  href="#country">🌎United States</a>
+                   
+            </section>
+        </div>
+<!-- mobile -->
+        <div class="md:hidden">
+            <section class="max-w-full m-5 gap-8 flex flex-col sm:flex-row justify-between p-6">
+                <details class="my-8">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Resources</summary>
+                    <p class="max-w-6xl text-xs sm:text-base mt-4 sm:text-left text-black">Gift cards</p>
+                    <p><a href="#jobs">Find a Store</a></p>
+                    <p><a href="#about">Membership</a></p>
+                    <p><a href="#about">Nike x NBA</a></p>
+                    <p><a href="#about">Nike Journal</a></p>
+                    <p><a href="#about">Site Feedback</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+    
+                <details class="my-8">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Help</summary>
+                    <p><a class="mt-4" href="#forartists">Get Help</a></p>
+                    <p><a href="#developers">Order Status</a></p>
+                    <p><a href="#advertising">Shipping and Delivery</a></p>
+                    <p><a href="#investors">Returns</a></p>
+                    <p><a href="#vendors">Order Cancelation</a></p>
+                    <p><a href="#vendors">Payment Option</a></p>
+                    <p><a href="#vendors">Gift card Balance</a></p>
+                    <p><a href="#vendors">Contact Us</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+    
+                <details class="my-8">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Company</summary>
+                    <p><a class="mt-4" href="support.html">About Nike</a></p>
+                    <p><a href="#webplayer">News</a></p>
+                    <p><a href="#freemobile">Career</a></p>
+                    <p><a href="#webplayer">Investors</a></p>
+                    <p><a href="#webplayer">Purpose</a></p>
+                    <p><a href="#webplayer">Sustainability</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+    
+                <details class="my-8">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Promotion & Discounts</summary>
+                    <p><a class="mt-4" href="individual.html">Student</a></p>
+                    <p><a href="#developers">Military</a></p>    
+                    <p><a href="family.html">Teacher</a></p> 
+                    <p><a href="student.html">First Responders and Medical <br> Proffesionals</a></p>
+                    <p><a href="#vendors" class="hover:opacity-90 mb-12">Birthdays</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+    
+                <a class="text-slate-500"  href="#country">🌎United States</a>
+
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+            </section>
+        </div>
+        
+
+        <section class="flex flex-row sm:flex-row max-w-full p-6">
+            <nav class="flex flex-col sm:flex-row gap-4 text-xs p- text-slate-500 mb-12" aria-label="footer">
+                <a href="#legal">© 2024 Nike, Inc. All Rights Reserved</a>
+                <details class="text-slate-500 text-xs">
+                    <summary>Guides</summary>
+                    <ol class="text-xs">
+                        <li><a href="shop.html">Nkie Air </a></li>
+                        <li><a href="shop.html">Nkie Air Force</a></li>
+                        <li><a href="shop.html">Nkie Air Max</a></li>
+                        <li><a href="shop.html">Nike Flyeasy</a></li>
+                        <li><a href="shop.html">Nike FlyNite</a></li>
+                        <li><a href="shop.html">Nike React</a></li>
+                        <li><a href="shop.html">Nike Free</a></li>
+                    </ol>
+                </details>
+                <a href="#privacy">Terms of Sale</a>
+                <a href="#privacy">Terms of Use</a>
+                <a href="#aboutads">Nike Privacy Policy</a>
+                <a href="#accessibility">Your Privacy Choices</a>
+                <a href="#accessibility">CA Supply Chains Act</a>
+            </nav>
+        </section>
+    </footer>
+
+</body>
+</html>

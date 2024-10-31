@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" class="sm:scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Men.nike</title>
+    <link rel="icon" href="favicon/favicon4.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+
+<body class="min-h-full  border-r-slate-50 dark:bg-black dark:text-white">
+    <header class="bg-white text-white sticky top-0 z-10">
+        <div class="hidden sm:block">
+            <section class="flex bg-slate-950 dark:bg-slate-950 max-w-5xl mx-auto justify-between items-center px-6">
+                <h1 class="flex gap-4">
+                    <a href="jordan.html"><img src="logo/jordan.png" alt="jordan"></a>
+                    <a href="#hero"><img src="logo/star.png" alt="star"></a>
+                </h1>
+               
+                <div>
+                    <nav class="flex-row hidden md:block text-xs text-black m-3" aria-label="main">
+                        <a href="find.html" class="hover:opacity-90">Find a Store</a>
+                        |
+                        <a href="help.html" class="hover:opacity-90">Help</a>
+                        |
+                        <a href="join" class="hover:opacity-90">Join Us</a>
+                        |
+                        <a href="#contact" class="hover:opacity-90">Sign In</a>
+                    </nav>
+                </div>
+            </section>
+        </div>
+
+        <hr class="hidden sm:block mx-auto bg-slate-900 w-full mt-12 ">
+
+        <section class="max-w-full mx-auto flex justify-between items-center p-3">
+            <h1 class="px-6">
+                <a href="index.html"><img class="ml-16 w-10" src="favicon/favicon.png" alt="jordan"></a>
+            </h1>
+           
+            <div>
+                <nav class="hidden md:block space-x-8 font-medium text-xs text-black" aria-label="main">
+                    <a href="shop.html" class="hover:opacity-90">New</a>
+                    <a href="men.html" class="hover:opacity-90">Men</a>
+                    <a href="women.html" class="hover:opacity-90">Women</a>
+                    <a href="shop.html" class="hover:opacity-90">Kids</a>
+                    <a href="jordan.html" class="hover:opacity-90">Jordan</a>
+                    <a href="shop.html" class="hover:opacity-90">Sales</a>
+                </nav>
+            </div>
+
+            <h1 class="flex gap-4 px-6">
+                <form class="my-8 hidden sm:block">
+                    <input class="w-full rounded text-base bg-slate-500" type="email" placeholder="&#128269; Search">
+                </form>
+            
+                <a class="md:hidden w-8" href="#hero"><img src="logo/magnify.png" alt="jordan"></a>
+                <a class="md:hidden w-8" href="#hero"><img src="logo/login.png" alt="jordan"></a>
+                <a class="w-8" href="#hero"><img src="logo/heart.png" alt="jordan"></a>
+                <a id="save-btn" onclick="save()" class="w-8 flex flex-row" href="cart.html"><img src="logo/bag.png" alt="bag"><h2 class="text-black" id="count-el"></h2></a>
+
+            </h1>
+
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-2xl text-black cursor-pointer relative w-8 h-8">
+                    &#9776;
+                </button>
+            </div>
+        </section>
+
+        <section id="mobile-menu" class="absolute top-0 bg-white w-full text-3xl flex-col  justify-center origin-top animate-open-menu hidden">
+            <button class="text-5xl text-black self-end px-6">
+                &times;
+            </button>
+            <nav class="flex flex-col min-h-screen items-center py-8 text-black" aria-label="mobile">
+                <a href="shop.html" class="w-full text-center py-6 hover:opacity-90">New & Featured</a>
+                <a href="men.html" class="w-full text-center py-6 hover:opacity-90">Men</a>
+                <a href="women.html" class="w-full text-center py-6 hover:opacity-90">Women</a>
+                <a href="shop.html" class="w-full text-center py-6 hover:opacity-90">Kids</a>
+                <a href="jordan.html" class="w-full text-center py-6 hover:opacity-90">Jordan</a>
+                <a href="shop.html" class="w-full text-center py-6 hover:opacity-90 mb-12">Sales</a>
+            </nav>
+            
+        </section>
+    </header>
+
+    <main class="w-full mx-auto bg-white">
+        <hr class="mx-auto bg-slate-900 w-full mt-12">
+        <section id="hero" class="flex flex-row bg-black w-full max-h-10 scroll-m-40 justify-center">
+            <button onclick="switchback()"><</button>
+            <h1 id="sale-el" class="text-center p-3"><a class="underline text-white text-xs font-medium" href="shop.html">Members: Free shipping on orders $50+</a></h1>
+            <button onclick="switchfront()">></button>
+        </section>
+        <hr class="mx-auto bg-slate-900 w-full mt-12 mb-12">
+        <section id="hero" class="w-full max-h-10 mb-12 scroll-m-40 justify-between mt-12">
+            <article class="w-2/3 flex flex-col sm:flex-row justify-between px-6">
+                <h2 class="text-2xl font-mono text-black px-6 font-medium mb-12">MEN</h2>
+                <nav class="hidden md:block space-x-8 font-medium text-lg text-black" aria-label="main">
+                    <a href="#shop" class="hover:opacity-90">Shoes</a>
+                    <a href="#shop" class="hover:opacity-90">Clothing</a>
+                    <a href="#shop" class="hover:opacity-90">Accessories</a>
+                    <a href="#shop" class="hover:opacity-90">Sale</a>
+                </nav>
+            </article>
+            <nav class="md:hidden space-x-8 font-medium text-lg text-black mb-12 px-6" aria-label="main">
+                <a href="#shop" class="hover:opacity-90">Shoes</a>
+                <a href="#shop" class="hover:opacity-90">Clothing</a>
+                <a href="#shop" class="hover:opacity-90">Accessories</a>
+                <a href="#shop" class="hover:opacity-90">Sale</a>
+            </nav>
+            
+            <img class="w-full" src="img/men.png" alt="">
+        </section>
+
+        <section class="flex gap-8 flex-col items-center justify-center mb-12">
+            <h2 class="text-5xl text-black text-center font-bold"> Give Sport</h2>
+            <p class="text-black text-lg sm:text-xl text-center font-semibold mt-8">Give a gift's that is engineered for movement and designed for comfort <br> this holiday season</p>
+            <button class="bg-black px-6 font-bold text-white rounded-3xl border border-slate-900 dark:border-none items-center"><a href="shop.html">Shop Men Gift</a></button>
+        </section>
+
+        <section class="mb-12 hidden sm:block">
+            <h2 class="text-2xl font-mono text-black px-6 font-medium mb-12">Trending</h2>
+            <ul class="list-none flex">
+                <li style="background-image: url(img/techwoven.png); background-size: cover;" class="w-1/2 h-96 bg-cover sm:max-w-80 items-center flex-col border-solid border-gray-800 dark:border-gray-800 dark:bg-gray-800 py-12 px-6 shadow-xl">
+                    <h3 class="text-lg px-6 font-bold text-white mb-12">Unlock Your Range of Motion</h3>
+                    <p class="sm:text-2xl font-medium mb-12 px-6 text-white">Nike Tech Woven Suit</p>
+                    <div class="mb-12 px-6"><button class="bg-white px-6 mb-12 font-medium text-black rounded-3xl border border-slate-900 dark:border-none items-center"><a href="shop.html#woven">Shop</a></button></div>
+                </li>
+    
+                <li style="background-image: url(img/vomero.png); background-size: cover;" class="w-1/2 h-96 bg-cover sm:max-w-80 items-center flex-col border-solid border-gray-800 dark:border-gray-800 dark:bg-gray-800 py-12 px-6 shadow-xl">
+                    <h3 class="text-lg px-6 font-bold text-white mb-12">For a Subtle flex</h3>
+                    <p class="sm:text-2xl font-medium mb-12 px-6 text-white">Nike Vomero 5 & more</p>
+                    <div class="mb-12 px-6"><button class="bg-white px-6 mb-12 font-medium text-black rounded-3xl border border-slate-900 dark:border-none items-center"><a href="shop.html#vomero">Shop</a></button></div>
+                </li>
+            </ul>
+            <ul class="list-none flex mb-12">
+                <li style="background-image: url(img/metcon.png); background-size: cover;" class="w-1/2 h-32 bg-cover sm:max-w-80 items-center flex-col border-solid border-gray-800 dark:border-gray-800 dark:bg-gray-800 py-12 px-6 shadow-xl">
+                    <h3 class="text-lg px-6 font-bold text-black mb-12">Freedom and Stability</h3>
+                    <p class="sm:text-2xl font-medium mb-12 px-6 text-black">Nike Free Metcon 6</p>
+                    <div class="mb-12 px-6"><button class="bg-white px-6 mb-12 font-medium text-black rounded-3xl border border-slate-900 dark:border-none items-center"><a href="shop.html#metcon">Shop</a></button></div>
+                </li>
+    
+                <li style="background-image: url(img/gotex.png); background-size: cover;" class="w-1/2 h- bg-cover sm:max-w-80 items-center flex-col border-solid border-gray-800 dark:border-gray-800 dark:bg-gray-800 py-12 px-6 shadow-xl">
+                    <h3 class="text-lg px-6 font-bold text-white mb-12">Distant Gratification</h3>
+                    <p class="sm:text-2xl font-medium mb-12 px-6 text-white">Pegasus Trial 5 GORE-TEX</p>
+                    <div class="mb-12 px-6"><button class="bg-white px-6 mb-12 font-medium text-black rounded-3xl border border-slate-900 dark:border-none items-center"><a href="shop.html#pegasus">Shop</a></button></div>
+                </li>
+            </ul>
+        </section>
+<!-- mobile -->
+        <section class="mb-12 md:hidden">
+            <ul class="list-none">
+                <li style="background-image: url(img/techwoven.png); background-size: cover;" class="w-full h-96 bg-cover sm:max-w-80 items-center flex-col border-solid border-gray-800 dark:border-gray-800 dark:bg-gray-800 py-12 px-6 shadow-xl">
+                    <h3 class="text-lg px-6 font-bold text-white mb-12">Unlock Your Range of Motion</h3>
+                    <p class="sm:text-2xl font-medium mb-12 px-6 text-white">Nike Tech Woven Suit</p>
+                    <div class="mb-12 px-6"><button class="bg-white px-6 mb-12 font-medium text-black rounded-3xl border border-slate-900 dark:border-none items-center"><a href="shop.html#woven2">Shop</a></button></div>
+                </li>
+    
+                <li style="background-image: url(img/vomero.png); background-size: cover;" class="w-full h-96 bg-cover sm:max-w-80 items-center flex-col border-solid border-gray-800 dark:border-gray-800 dark:bg-gray-800 py-12 px-6 shadow-xl">
+                    <h3 class="text-lg px-6 font-bold text-white mb-12">For a Subtle flex</h3>
+                    <p class="sm:text-2xl font-medium mb-12 px-6 text-white">Nike Vomero 5 & more</p>
+                    <div class="mb-12 px-6"><button class="bg-white px-6 mb-12 font-medium text-black rounded-3xl border border-slate-900 dark:border-none items-center"><a href="shop.html#vomero2">Shop</a></button></div>
+                </li>
+
+                <li style="background-image: url(img/metcon.png); background-size: cover;" class="w-full h-32 bg-cover sm:max-w-80 items-center flex-col border-solid border-gray-800 dark:border-gray-800 dark:bg-gray-800 py-12 px-6 shadow-xl">
+                    <h3 class="text-lg px-6 font-bold text-white mb-12">Freedom and Stability</h3>
+                    <p class="sm:text-2xl font-medium mb-12 px-6 text-white">Nike Free Metcon 6</p>
+                    <div class="mb-12 px-6"><button class="bg-white px-6 mb-12 font-medium text-black rounded-3xl border border-slate-900 dark:border-none items-center"><a href="shop.html#metcon2">Shop</a></button></div>
+                </li>
+    
+                <li style="background-image: url(img/gotex.png); background-size: cover;" class="w-full bg-cover sm:max-w-80 items-center flex-col border-solid border-gray-800 dark:border-gray-800 dark:bg-gray-800 py-12 px-6 shadow-xl">
+                    <h3 class="text-lg px-6 font-bold text-white mb-12">Distant Gratification</h3>
+                    <p class="sm:text-2xl font-medium mb-12 px-6 text-white">Pegasus Trial 5 GORE-TEX</p>
+                    <div class="mb-12 px-6"><button class="bg-white px-6 mb-12 font-medium text-black rounded-3xl border border-slate-900 dark:border-none items-center"><a href="shop.html#pegasus2">Shop</a></button></div>
+                </li>
+            </ul>
+            
+        </section>
+
+        <section class="flex gap-8 flex-col items-center justify-center mt-12">
+            <img class="w-full" src="img/JA.png" alt="">
+            <h2 class="text-3xl sm:text-5xl text-black text-center font-bold">I GET UP</h2>
+            <p class="text-black text-xl text-center font-semibold mt-8">The Ja 2 is built to maximize explosiveness and quickness, so hoppers <br> can get up when no one expects it</p>
+            <button class="bg-black font-bold text-white p-3 rounded-3xl border border-slate-900 dark:border-none sm:w-full sm:m-2w"><a href="shop.html#ja2">Explore</a></button>
+        </section>
+
+        <section id="shop" class="flex flex-col max-w-full p-6 space-x-8">
+            <h2 class="text-3xl font-mono text-black px-6 font-medium mb-4">Shop The Essentials</h2>
+            <div class="flex flex-col sm:flex-row gap-8 justify-center">
+                <div>
+                    <img class="w-16" src="img/mencap.png" alt="">
+                    <p class="text-black text-xl font-semibold mt-8">Accessories</p>
+                </div>
+                <div>
+                    <img class="w-16" src="img/menshoes.png" alt="">
+                    <p class="text-black text-xl font-semibold mt-8">Shoes</p>
+                </div>
+                <div>
+                    <img class="w-16" src="img/cloth.png" alt="">
+                    <p class="text-black text-xl font-semibold mt-8">Clothings</p>
+                </div>
+            </div>
+            
+        </section>
+
+        <section class="flex flex-row sm:flex-row max-w-full p-6">
+            <h2 class="text-5xl font-mono text-black text-center font-bold">SHOP BY CLASSICS</h2>
+        </section>
+
+        <section class="max-w-full flex flex-col justify-between items-center p-6">
+            <h2><img src="favicon/favicon.png" alt=""></h2>
+            <nav class="flex sm:flex-row gap-4 text-lg font-medium sm:text-xs p-6 text-black hover:bg-opacity-100" aria-label="footer">
+                <a href="find.html">Find a Store</a>
+                <a href="help.html">Help</a>
+                <a href="#joinus">Join Us</a>
+                <a href="#signin">Sign In</a>
+            </nav>
+
+            <div class="hidden sm:block">
+                <div class="max-w-full flex flex-col sm:flex-row justify-center p-6 gap-8">
+                    <nav class="flex flex-col gap-4 text-lg p-6 text-slate-500">
+                        <h3 class="text-xl text-black font-medium">Men's Shoes</h3>
+                        <a class="mt-4" href="shop.html">Running</a>
+                        <a href="shop.html">Basketball</a>
+                        <a href="shop.html">Golf</a>
+                        <a href="shop.html">Tennis Shoes</a>
+                    </nav>
+                    <nav class="flex flex-col gap-4 text-lg p-6 text-slate-500">
+                        <h3 class="text-xl text-black font-medium">Men's Clothings</h3>
+                        <a class="mt-4" href="shop.html">Top & T-Shirts</a>
+                        <a href="shop.html">Jackets</a>
+                        <a href="shop.html">Hoodies</a>
+                        <a href="shop.html">Pants</a>
+                    </nav>
+                    <nav class="flex flex-col gap-4 text-lg p-6 text-slate-500">
+                        <h3 class="text-xl text-black font-medium">Men's Gear</h3>
+                        <a class="mt-4" href="shop.html">All Men's Gear</a>
+                        <a href="shop.html">socks</a>
+                        <a href="shop.html">Bags</a>
+                        <a href="shop.html">Balls</a>
+                    </nav>
+                    <nav class="flex flex-col gap-4 text-lg p-6 mb-12 text-slate-500">
+                        <h3 class="text-xl text-black font font-medium">Featured</h3>
+                        <a class="mt-4" href="shop.html">New Releases</a>
+                        <a href="shop.html">Clearance</a>
+                        <a href="shop.html">Metcon</a>
+                        <a href="shop.html">NFL</a>
+                    </nav>
+                </div>
+            </div>
+            
+        </section>
+<!-- mobile -->
+        <div class="md:hidden">
+            <section class="max-w-full m-5 gap-8 flex flex-col sm:flex-row justify-between p-6">
+                <details class="my-8 text-black">
+                    <summary class="font-medium text-xl text-black list-none">Men's Shoes</summary>
+                    <p><a href="shop.html">Running</a></p>
+                    <p><a href="shop.html">Basketball</a></p>
+                    <p><a href="shop.html">Golf</a></p>
+                    <p><a href="shop.html">Tennis Shoes</a></p>
+                    <p><a href="shop.html">Jordan</a></p>
+                    <p><a href="shop.html">Football</a></p>
+                    <p><a href="shop.html">Soccer</a></p>
+                    <p><a href="shop.html">Training</a></p>
+                </details>
+
+                <details class="my-8 text-black">
+                    <summary class="text-xl font-medium text-black list-none">Men's Clothings</summary>
+                    <p><a class="mt-4" href="shop.html">Top & T-Shirts</a></p>
+                    <p><a href="shop.html">Jackets</a></p>
+                    <p><a href="shop.html">Hoodies</a></p>
+                    <p><a href="shop.html">Pants</a></p>
+                    <p><a href="shop.html">Joggers</a></p>
+                    <p><a href="shop.html">Sweat Pants</a></p>
+                    <p><a href="shop.html">Shorts</a></p>
+                    <p><a href="shop.html">Jersey</a></p>
+                </details>
+
+                <details class="my-8 text-black">
+                    <summary class="text-xl font-medium text-black list-none">Men's Gear</summary>
+                    <p><a class="mt-4" href="shop.html">All Men's Gear</a></p>
+                    <p><a href="shop.html">Socks</a></p>
+                    <p><a href="shop.html">Bags</a></p>
+                    <p><a href="shop.html">Balls</a></p>
+                </details>
+
+                <details class="my-8 text-black">
+                    <summary class="text-xl font-medium text-black list-none">Featured</summary>
+                    <p class="max-w-6xl text-xs sm:text-base mt-4 sm:text-left text-black">New Releases</p>
+                    <p><a href="shop.html">Clearance</a></p>
+                    <p><a href="shop.html">Metcon</a></p>
+                    <p><a href="shop.html">NFL</a></p>
+                    <p><a href="shop.html">Men's Essentilas</a></p>
+                    <p><a href="shop.html">Best selling</a></p>
+                </details>
+            </section>
+        </div>
+
+    </main>
+
+    <footer id="footer" class="max-w-full bg-white text-black text-base mt-12">
+        <hr class="mx-auto bg-slate-900 w-full mt-12 mb-12">
+        <div class="hidden sm:block">
+            <section class="max-w-full m-5 gap-8 flex flex-col sm:flex-row justify-between p-6">
+                <nav class="flex flex-col gap-4 p-6 text-slate-500" aria-label="footer">
+                    <h4 class="text-sm text-black">Resources</h4>
+                    <a class="mt-4" href="shop.html">Gift cards</a>
+                    <a href="find.html">Find a Store</a>
+                    <a href="#about">Membership</a>
+                    <a href="#about">Nike x NBA</a>
+                    <a href="#about">Nike Journal</a>
+                    <a href="#about">Site Feedback</a>
+                </nav>
+     
+                <nav class="flex flex-col gap-4 p-6 text-slate-500" aria-label="footer">
+                    <h4 class="text-sm text-black">Help</h4>
+                    <a class="mt-4" href="#forartists">Get Help</a>
+                    <a href="#developers">Order Status</a>
+                    <a href="#advertising">Shipping and Delivery</a>
+                    <a href="#investors">Returns</a>
+                    <a href="#vendors">Order Cancelation</a>
+                    <a href="#vendors">Payment Option</a>
+                    <a href="#vendors">Gift card Balance</a>
+                    <a href="#vendors">Contact Us</a>
+                </nav>
+    
+                <nav class="flex flex-col gap-4 p-6 text-slate-500" aria-label="footer">
+                    <h4 class="text-sm text-black">Company</h4>
+                    <a class="mt-4" href="support.html">About Nike</a>
+                    <a href="#webplayer">News</a>
+                    <a href="#freemobile">Career</a>
+                    <a href="#webplayer">Investors</a>
+                    <a href="#webplayer">Purpose</a>
+                    <a href="#webplayer">Sustainability</a>
+                </nav>
+    
+                <nav class="flex flex-col gap-4 p-6 text-slate-500" aria-label="footer">
+                    <h4 class="text-sm text-black">Promotion & Discounts</h4>
+                    <a class="mt-4" href="individual.html">Student</a>
+                    <a href="#developers">Military</a>
+                    <a href="family.html">Teacher</a>
+                    <a href="student.html">First Responders and Medical <br> Proffesionals</a>
+                    <a href="#vendors" class="hover:opacity-90 mb-12">Birthdays</a>
+                </nav>
+    
+                <a class="text-slate-500 p-6"  href="#country">🌎United States</a>
+                   
+            </section>
+        </div>
+<!-- mobile -->
+        <div class="md:hidden">
+            <section class="max-w-full m-5 gap-8 flex flex-col sm:flex-row justify-between p-6">
+                <details class="my-8">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Resources</summary>
+                    <p class="max-w-6xl text-xs sm:text-base mt-4 sm:text-left text-black">Gift cards</p>
+                    <p><a href="find.html">Find a Store</a></p>
+                    <p><a href="#about">Membership</a></p>
+                    <p><a href="#about">Nike x NBA</a></p>
+                    <p><a href="#about">Nike Journal</a></p>
+                    <p><a href="#about">Site Feedback</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+    
+                <details class="my-8">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Help</summary>
+                    <p><a class="mt-4" href="#forartists">Get Help</a></p>
+                    <p><a href="#developers">Order Status</a></p>
+                    <p><a href="#advertising">Shipping and Delivery</a></p>
+                    <p><a href="#investors">Returns</a></p>
+                    <p><a href="#vendors">Order Cancelation</a></p>
+                    <p><a href="#vendors">Payment Option</a></p>
+                    <p><a href="#vendors">Gift card Balance</a></p>
+                    <p><a href="#vendors">Contact Us</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+    
+                <details class="my-8">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Company</summary>
+                    <p><a class="mt-4" href="support.html">About Nike</a></p>
+                    <p><a href="#webplayer">News</a></p>
+                    <p><a href="#freemobile">Career</a></p>
+                    <p><a href="#webplayer">Investors</a></p>
+                    <p><a href="#webplayer">Purpose</a></p>
+                    <p><a href="#webplayer">Sustainability</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+    
+                <details class="my-8">
+                    <summary class="text-sm font-medium sm:text-xl text-black">Promotion & Discounts</summary>
+                    <p><a class="mt-4" href="individual.html">Student</a></p>
+                    <p><a href="#developers">Military</a></p>    
+                    <p><a href="family.html">Teacher</a></p> 
+                    <p><a href="student.html">First Responders and Medical <br> Proffesionals</a></p>
+                    <p><a href="#vendors" class="hover:opacity-90 mb-12">Birthdays</a></p>
+                </details>
+                
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+    
+                <a class="text-slate-500"  href="#country">🌎United States</a>
+
+                <hr class="mx-auto bg-black dark:bg-gray-700 w-full">
+            </section>
+        </div>
+        
+
+        <section class="flex flex-row sm:flex-row max-w-full p-6">
+            <nav class="flex flex-col sm:flex-row gap-4 text-xs p- text-slate-500 mb-12" aria-label="footer">
+                <a href="#legal">© 2024 Nike, Inc. All Rights Reserved</a>
+                <details class="text-slate-500 text-xs">
+                    <summary>Guides</summary>
+                    <ol class="text-xs">
+                        <li><a href="#privacy">Nkie Air </a></li>
+                        <li><a href="#privacy">Nkie Air Force</a></li>
+                        <li><a href="#privacy">Nkie Air Max</a></li>
+                        <li><a href="#privacy">Nike Flyeasy</a></li>
+                        <li><a href="#privacy">Nike FlyNite</a></li>
+                        <li><a href="#privacy">Nike React</a></li>
+                        <li><a href="#privacy">Nike Free</a></li>
+                    </ol>
+                </details>
+                <a href="#privacy">Terms of Sale</a>
+                <a href="#privacy">Terms of Use</a>
+                <a href="#aboutads">Nike Privacy Policy</a>
+                <a href="#accessibility">Your Privacy Choices</a>
+                <a href="#accessibility">CA Supply Chains Act</a>
+            </nav>
+        </section>
+    </footer>
+
+</body>
+</html>
